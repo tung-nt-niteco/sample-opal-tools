@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "name": "tung-opal-test",
   "builds": [
 	{ "src": "/public/**", "use": "@now/static" },
