@@ -2,8 +2,8 @@
   "version": 2,
   "name": "tung-opal-test",
   "builds": [
-	{ "src": "/public/**", "use": "@now/static" },
-	{ "src": "dist/index.js", "use": "@now/node" }
+	{ "src": "/public/**", "use": "@vercel/static" },
+	{ "src": "src/index.ts", "use": "@vercel/node" }
   ],
   "routes": [
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
