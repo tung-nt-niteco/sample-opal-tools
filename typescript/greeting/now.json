@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "name": "tung-opal-test",
+  "builds": [
+	{ "src": "/public/**", "use": "@now/static" },
+	{ "src": "dist/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/robots.txt", "dest": "/public/robots.txt" },
+    {
+      "src": "/",
+      "dest": "/dist/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/",
+      "dest": "/dist/index.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/index.js",
+      "methods": ["POST"]
+    }
+  ]
+}
